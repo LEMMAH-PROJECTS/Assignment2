@@ -46,6 +46,8 @@
 		<seleniumJava>3.141.59</seleniumJava>
 		<aspectj.version>1.8.10</aspectj.version>
 		<alluretestng.version>2.13.1</alluretestng.version>
+		<commons-io>2.7</commons-io>
+		<video-recorder>1.0</video-recorder>
 	</properties>
 
   <dependencies>
@@ -162,6 +164,19 @@
 		<artifactId>selenium-java</artifactId>
 		<version>${seleniumJava}</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>${commons-io}</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.automation-remarks/video-recorder -->
+	<dependency>
+	    <groupId>com.automation-remarks</groupId>
+	    <artifactId>video-recorder</artifactId>
+	    <version>${video-recorder}</version>
+	</dependency>
+	
   </dependencies>
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
