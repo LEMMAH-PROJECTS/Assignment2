@@ -1,14 +1,11 @@
 package com.neophotonics;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-import org.jsoup.helper.HttpConnection;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,7 +18,7 @@ import com.neophotonics.utility.WriteToTxtFile;
 public class checkBrokenLinks {
 //	private static final String USER_AGENT = "Mozilla/5.0";
 //	private static final String URL = "https://www.neophotonics.com/";
-	private static String filePath = System.getProperty("user.dir") + "/outputData/brokenLinksReport.txt";
+	private static String filePath = System.getProperty("user.dir") + "/outputData/blogbrokenLinksReport.txt";
 	private static String message = "";
 	public static void main(String[] args) {
 		
@@ -41,7 +38,7 @@ public class checkBrokenLinks {
 	    	WebDriver driver = new ChromeDriver();
 			
 			driver.manage().window().maximize();
-			driver.get("https://www.neophotonics.com/");
+			driver.get("https://www.neophotonics.com/blog/");
 			
 			List<WebElement> links = driver.findElements(By.tagName("a"));
 			System.out.println("Total links are : " + links.size());
